@@ -5,10 +5,10 @@ usage
 -----
 ```
 git clone --bare https://github.com/rrotter/.dot.git $HOME/.dot
-source .zshrc # or just open a new terminal session
+alias dot="/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME"
 dot checkout
 ```
-`dot` is simply `alias dot='/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'`, so from here out, it's used just like `git`
+Then continue working in a new terminal window so .zshrc is sourced.
 
 to do
 -----

@@ -48,6 +48,9 @@ then
   . $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
+path+=('~/bin')
+export PATH
+
 # still needed?
 #export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 

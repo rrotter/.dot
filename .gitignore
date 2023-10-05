@@ -10,8 +10,10 @@
 .bash_history
 # gh config generated upon login w/ `gh auth login`
 .config/gh
+.irb_history
 .lesshst
 .local
+.node_repl_history
 # asdf installed tools change too often to bother saving
 .tool-versions
 .viminfo

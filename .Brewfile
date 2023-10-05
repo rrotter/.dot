@@ -15,7 +15,7 @@ brew "tanka"
 brew "helm"
 brew "kubernetes-cli"
 brew "k9s"
-brew "krew"
+#brew "krew" # still needed?
 #brew "lima" # replacement for docker-desktop
 
 # vm

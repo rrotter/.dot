@@ -18,10 +18,13 @@
 .tool-versions
 .viminfo
 .wget-hsts
-# zsh config is in .config, except for .zshenv
-.zprofile
+.zcompcache
+.zcompdump
 .zsh_history
 .zsh_sessions
+
+# .zshenv should be the only zsh config outside of .config
+.zprofile
 .zshrc
 
 # not dotfiles

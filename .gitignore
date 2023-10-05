@@ -14,8 +14,6 @@
 .lesshst
 .local
 .node_repl_history
-# asdf installed tools change too often to bother saving
-.tool-versions
 .viminfo
 .wget-hsts
 .zcompcache

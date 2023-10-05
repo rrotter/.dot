@@ -1,0 +1,13 @@
+[user]
+	name = Ryan Rotter
+	email = rrotter@users.noreply.github.com
+[alias]
+	co = checkout
+	br = branch
+	fixup = commit --amend
+	st = status
+	lo = log -4
+[push]
+	autoSetupRemote = true
+[core]
+	excludesfile = ~/.config/gitignore

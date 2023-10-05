@@ -1,0 +1,39 @@
+# this git repo
+.dot
+
+# system files and other ephemeral data
+.Brewfile.lock.json
+.CFUserTextEncoding
+.DS_Store
+.Trash
+.asdf
+.bash_history
+# gh config generated upon login w/ `gh auth login`
+.config/gh
+.lesshst
+.local
+# asdf installed tools change too often to bother saving
+.tool-versions
+.viminfo
+.wget-hsts
+# zsh config is in .config, except for .zshenv
+.zprofile
+.zsh_history
+.zsh_sessions
+.zshrc
+
+# not dotfiles
+Desktop
+Documents
+Downloads
+Movies
+Music
+Pictures
+Public
+
+# Library and exceptions
+!Library/
+Library/*
+!Library/Preferences/
+Library/Preferences/*
+!Library/Preferences/glow/

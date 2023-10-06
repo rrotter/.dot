@@ -10,6 +10,7 @@
 .bash_history
 # gh config generated upon login w/ `gh auth login`
 .config/gh
+.gem
 .irb_history
 .lesshst
 .local

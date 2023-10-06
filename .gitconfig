@@ -3,6 +3,7 @@
 	email = rrotter@users.noreply.github.com
 [alias]
 	co = checkout
+	ci = commit
 	br = branch
 	fixup = commit --amend
 	st = status

@@ -30,7 +30,7 @@ alias dot="/usr/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME"
 #     use `command diff` if you want the actual `diff` command in a git repo
 # - this totally breaks tab completion, maybe we can fix that by using something that
 #     emulates fish's `abbr`?
-function add push pull branch br status st remote commit fixup checkout co diff log lo () {
+function add push pull branch br status st remote commit fixup checkout co ci diff log lo () {
     if git rev-parse --is-inside-work-tree &> /dev/null
     then
         git $0 "$@"

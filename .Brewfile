@@ -1,9 +1,10 @@
 # package management
 brew "asdf" # need this for python, ruby, node, etc
+brew "xz" # required for python-build
 brew "mas" # so we can install mas apps here!
 
 # basic cli tools
-mas "Xcode", id: 497799835
+#mas "Xcode", id: 497799835 # this triggers a reinstall, which takes forever
 brew "watch"
 brew "coreutils" # tac, sha256sum, etc
 brew "wget"
@@ -51,3 +52,6 @@ mas "Wipr", id: 1320666476
 # misc tools
 cask "kicad"
 mas "Mactracker", id: 430255202
+
+# configuration management support
+cask "hpedrorodrigues/tools/dockutil"

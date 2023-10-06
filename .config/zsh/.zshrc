@@ -51,9 +51,6 @@ fi
 path+=('~/bin')
 export PATH
 
-# still needed?
-#export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
 # zsh autocomplete boilerplate, keep this at the end
 autoload -Uz compinit
 compinit

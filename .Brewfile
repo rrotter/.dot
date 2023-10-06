@@ -16,7 +16,7 @@ brew "tanka"
 brew "helm"
 brew "kubernetes-cli"
 brew "k9s"
-#brew "krew" # still needed?
+tap "int128/kubelogin"
 #brew "lima" # replacement for docker-desktop
 
 # vm

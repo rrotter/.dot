@@ -41,3 +41,4 @@ Library/*
 !Library/Preferences/
 Library/Preferences/*
 !Library/Preferences/glow/
+!Library/Sounds/

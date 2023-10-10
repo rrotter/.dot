@@ -12,9 +12,11 @@
 .config/gh
 .gem
 .irb_history
+.kube
 .lesshst
 .local
 .node_repl_history
+.swiftpm
 .viminfo
 .wget-hsts
 .zcompcache
@@ -27,6 +29,7 @@
 .zshrc
 
 # not dotfiles
+Applications
 Desktop
 Documents
 Downloads

@@ -10,6 +10,8 @@
 .asdf
 .bash_history
 .cache
+# iterm symlink
+.config/iterm2/AppSupport
 .dbus
 .gem
 .irb_history

@@ -12,3 +12,5 @@
 	autoSetupRemote = true
 [core]
 	excludesfile = ~/.config/gitignore
+[commit]
+	verbose = true

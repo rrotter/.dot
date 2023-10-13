@@ -9,6 +9,9 @@ setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_DUPS
 
+# keybindings
+bindkey \^U backward-kill-line
+
 # clear all zsh/os default aliases
 unalias -a
 # colemak asdf

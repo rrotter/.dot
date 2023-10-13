@@ -9,6 +9,7 @@
 .Xauthority
 .asdf
 .bash_history
+.bundle/cache
 .cache
 # iterm symlink
 .config/iterm2/AppSupport

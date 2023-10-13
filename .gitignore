@@ -6,25 +6,38 @@
 .CFUserTextEncoding
 .DS_Store
 .Trash
+.Xauthority
 .asdf
 .bash_history
-# gh config generated upon login w/ `gh auth login`
-.config/gh
+.cache
+.dbus
 .gem
 .irb_history
-.kube
 .lesshst
 .local
 .node_repl_history
 .swiftpm
 # vim swap
 .sw[a-z]
+.vim/.netrwhist
 .viminfo
 .wget-hsts
+.xsession-errors
 .zcompcache
 .zcompdump
 .zsh_history
 .zsh_sessions
+
+# auth and accounts
+.aws
+.config/gh/hosts.yml
+.kube
+.ssh
+
+# browser config
+.config/chromium/
+.config/google-chrome/
+.mozilla/
 
 # .zshenv should be the only zsh config outside of .config
 .zprofile

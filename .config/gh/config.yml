@@ -1,2 +1,4 @@
 aliases:
     co: pr checkout
+    repos: search repos
+    clone: repo clone

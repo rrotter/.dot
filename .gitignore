@@ -22,6 +22,7 @@
 .swiftpm
 # vim swap
 .sw[a-z]
+.terraform.d
 .vim/.netrwhist
 .viminfo
 .wget-hsts

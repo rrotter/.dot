@@ -12,15 +12,20 @@ brew "util-linux" # really just for `cal -m`
 brew "jq"
 
 # kubernetes
-brew "tanka"
-brew "helm"
 brew "kubernetes-cli"
 brew "k9s"
 tap "int128/kubelogin"
-#brew "lima" # replacement for docker-desktop
+brew "tanka"
+brew "jsonnet-bundler"
+brew "helm"
+
+# terraform
+brew "terraform"
+brew "opentofu"
 
 # vm
 cask "utm"
+#brew "lima"
 
 # dev
 brew "gh"

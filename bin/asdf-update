@@ -5,9 +5,12 @@ brew upgrade asdf
 
 asdf plugin add ruby
 asdf plugin add python
+asdf plugin update --all
 
 asdf install ruby latest:2.7
 asdf install ruby latest:3
 asdf install python latest:3
+
+echo
 
 asdf list

@@ -51,7 +51,7 @@ then
   . $(brew --prefix asdf)/libexec/asdf.sh
 fi
 
-path+=('~/bin')
+path+=("$HOME/bin")
 export PATH
 
 # zsh autocomplete boilerplate, keep this at the end

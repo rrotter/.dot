@@ -38,7 +38,7 @@ brew "glow"
 # text editors
 cask "textmate"
 brew "helix"
-cask "vscodium"
+cask "pulsar"
 
 # desktop env
 cask "1password"

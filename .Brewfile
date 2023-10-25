@@ -3,13 +3,14 @@ brew "asdf" # need this for python, ruby, node, etc
 brew "xz" # required for python-build
 brew "mas" # so we can install mas apps here!
 
-# basic cli tools
+# cli tools
 #mas "Xcode", id: 497799835 # this triggers a reinstall, which takes forever
 brew "watch"
 brew "coreutils" # tac, sha256sum, etc
 brew "wget"
 brew "util-linux" # really just for `cal -m`
 brew "jq"
+tap "homebrew/aliases" # add `brew alias` command
 
 # kubernetes
 brew "kubernetes-cli"
@@ -47,7 +48,6 @@ cask "discord"
 cask "firefox" # just need another browser sometimes
 cask "rectangle" # window snap tool
 cask "skim"
-cask "slack"
 #cask "xquartz" # do I ever use this?
 mas "Deliveries", id: 290986013
 mas "Numbers", id: 409203825

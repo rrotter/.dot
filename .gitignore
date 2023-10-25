@@ -9,10 +9,7 @@
 .Xauthority
 .asdf
 .bash_history
-.bundle/cache
 .cache
-# iterm symlink
-.config/iterm2/AppSupport
 .dbus
 .gem
 .irb_history
@@ -20,11 +17,7 @@
 .local
 .node_repl_history
 .swiftpm
-# vim swap
-.sw[a-z]
 .terraform.d
-.vim/.netrwhist
-.viminfo
 .wget-hsts
 .xsession-errors
 .zcompcache
@@ -32,9 +25,13 @@
 .zsh_history
 .zsh_sessions
 
+# vim
+.sw[a-z]
+.vim
+.viminfo
+
 # auth and accounts
 .aws
-.config/gh/hosts.yml
 .kube
 .ssh
 
@@ -54,6 +51,7 @@ Pictures
 Public
 
 # Library and exceptions
+.config/iterm2/
 !Library/
 Library/*
 !Library/Preferences/

@@ -21,6 +21,7 @@ alias k=kubectl
 alias kk=k9s
 alias tf=terraform
 alias be="bundle exec"
+alias ls="ls --color=auto"
 # Monday is the first day of the week.
 if [[ -a /opt/homebrew/opt/util-linux/bin/cal ]]; then
   alias cal="/opt/homebrew/opt/util-linux/bin/cal -m"

@@ -14,6 +14,7 @@
 .gem
 .irb_history
 .lesshst
+.lima
 .local
 .npm
 .node_repl_history

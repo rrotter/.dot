@@ -6,11 +6,12 @@ brew "mas" # so we can install mas apps here!
 # cli tools
 #mas "Xcode", id: 497799835 # this triggers a reinstall, which takes forever
 brew "watch"
-brew "coreutils" # tac, sha256sum, etc
+brew "coreutils" # tac, etc
 brew "wget"
 brew "util-linux" # really just for `cal -m`
 brew "jq"
 tap "homebrew/aliases" # add `brew alias` command
+brew "dos2unix"
 
 # kubernetes
 brew "kubernetes-cli"
@@ -26,7 +27,8 @@ brew "opentofu"
 
 # vm
 cask "utm"
-#brew "lima"
+brew "lima"
+brew "glib", link: false # qemu/lima dep
 
 # dev
 brew "gh"

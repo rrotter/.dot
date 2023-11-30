@@ -1,0 +1,33 @@
+## fpath ##
+if type brew &>/dev/null; then
+  fpath+=$(brew --prefix)/share/zsh/site-functions
+fi
+
+## compinit ##
+autoload -Uz compinit
+compinit
+
+## tweaks after initialization ##
+
+# ignore rarely used commands that conflict w/ common commands
+function () {
+  local _ignore=''
+  if [[ `uname -o` = Darwin ]]; then
+    # kerberos
+    _ignore=${_ignore}'|kadmin*|kcc|kdcsetup|kdestroy|kgetcred|kinit|klist|kpasswd|krb*|ktutil|kswitch'
+    # kext
+    _ignore=${_ignore}'|kcditto|kext*|klist_cdhashes|kmutil'
+    # java
+    _ignore=${_ignore}'|keytool'
+  fi
+  if type brew &>/dev/null; then
+    # gnucoreutils - disable autocompletion of every g* prefixed command; regen this list with:
+    #   echo $(brew ls coreutils libtool | grep '/bin/g' | sed 's/.*bin\///') | sed 's/ /|/g' | sed 's/\[/\\\[/g'
+    _ignore=${_ignore}'|gsha512sum|gusers|gprintenv|gmknod|gdd|gtsort|grealpath|grmdir|gfold|gnl|greadlink|gshred|gmv|gmkdir|gkill|guniq|gpr|ghead|glink|gstat|gmktemp|gyes|gsha1sum|grm|gsha256sum|gfalse|gwho|gcut|gvdir|gdir|gchmod|gbase32|ghostid|gnohup|gtr|gdirname|gsha384sum|gchroot|gpaste|gid|gpinky|genv|gln|gbasename|gtruncate|gcp|gls|gtrue|gchown|gsync|guptime|gsum|gtac|gexpand|gruncon|gpathchk|gnice|gecho|gdu|gb2sum|gtouch|gmkfifo|gdf|gjoin|gtest|gmd5sum|gunexpand|gsort|gshuf|gfmt|gunlink|gcsplit|g\[|gwhoami|gsplit|gseq|gdircolors|ginstall|gsha224sum|gcomm|gtty|gcksum|gexpr|gbase64|gwc|gnproc|gptx|gtimeout|gpwd|gtail|gchcon|glogname|guname|gtee|gstty|gchgrp|gcat|ggroups|gsleep|gfactor|god|gprintf|gstdbuf|gnumfmt|gbasenc|gdate|glibtool|glibtoolize'
+  fi
+
+  zstyle ':completion:*:*:-command-:*:*' ignored-patterns $_ignore
+}
+
+# git cherry-pick > git cherry
+zstyle ':completion::complete:git:*:*' ignored-patterns 'cherry'

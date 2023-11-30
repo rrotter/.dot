@@ -1,0 +1,30 @@
+## common aliases for zsh and bash ##
+
+# clear default aliases
+unalias -a
+
+# colemak asdf
+type asdf &>/dev/null && alias arst=asdf
+
+# shortening
+type kubectl &>/dev/null && alias k=kubectl
+type k9s &>/dev/null && alias k9=k9s
+type ruby &>/dev/null && alias be="bundle exec"
+alias g=git
+
+# git subcommands
+# This is the preferred method because it preserves autocomplete functionality
+for cmd in add br branch checkout ci co commit fixup l lo pull remote st status; do
+  alias $cmd="git ${cmd}"
+done
+
+# color prefs
+alias ls="ls --color=auto"
+
+# Monday is the first day of the week.
+if [[ -a /opt/homebrew/opt/util-linux/bin/cal ]]; then
+  alias cal="/opt/homebrew/opt/util-linux/bin/cal -m"
+fi
+
+# manage dotfiles
+alias dot="git --git-dir=$HOME/.dot/ --work-tree=$HOME"

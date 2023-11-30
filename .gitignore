@@ -41,6 +41,13 @@
 .config/google-chrome/
 .mozilla/
 
+# Testing new tools
+# If I keep them I'll track the configs, if not I'll delete the configs
+.config/zed/
+.pulsar/
+.vscode-oss/
+.vscode/
+
 # not dotfiles
 Applications
 Desktop

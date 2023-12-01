@@ -12,6 +12,8 @@ setopt HIST_IGNORE_DUPS
 # keybindings
 bindkey \^U backward-kill-line
 
+setopt autocd
+
 # asdf initialization
 if type brew &>/dev/null; then
   source $(brew --prefix asdf)/libexec/asdf.sh

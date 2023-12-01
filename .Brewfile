@@ -28,7 +28,6 @@ brew "opentofu"
 # vm
 cask "utm"
 brew "lima"
-brew "glib", link: false # qemu/lima dep
 
 # dev
 brew "gh"

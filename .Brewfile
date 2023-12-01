@@ -12,6 +12,7 @@ brew "util-linux" # really just for `cal -m`
 brew "jq"
 tap "homebrew/aliases" # add `brew alias` command
 brew "dos2unix"
+brew "duti" # for setting mac file handlers
 
 # kubernetes
 brew "kubernetes-cli"
@@ -59,6 +60,3 @@ mas "Wipr", id: 1320666476
 # misc tools
 cask "kicad"
 mas "Mactracker", id: 430255202
-
-# configuration management support
-cask "hpedrorodrigues/tools/dockutil"

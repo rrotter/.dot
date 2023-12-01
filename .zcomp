@@ -19,6 +19,11 @@ function () {
     _ignore=${_ignore}'|kcditto|kext*|klist_cdhashes|kmutil'
     # java
     _ignore=${_ignore}'|keytool'
+    # misc deprecated junk
+    _ignore=${_ignore}'|DirectoryService|DeRez|ResMerger|Rez|SetFile|SplitForks'
+    _ignore=${_ignore}'ppdc|ppdhtml|ppdi|ppdmerge|ppdpo'
+    # other things I don't use directly, but for whatever reason want to keep installed
+    _ignore=${_ignore}'|apptainer.lima|docker.lima|kubectl.lima|nerdctl.lima|podman.lima'
   fi
   if type brew &>/dev/null; then
     # gnucoreutils - disable autocompletion of every g* prefixed command; regen this list with:

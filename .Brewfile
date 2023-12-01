@@ -45,13 +45,11 @@ cask "pulsar"
 # desktop env
 cask "1password"
 cask "1password-cli"
-cask "bettertouchtool" # fix navigation keys in Terminal.app
 cask "discord"
-cask "firefox" # just need another browser sometimes
+cask "firefox"
 cask "rectangle" # window snap tool
 cask "skim"
 cask "zoom"
-#cask "xquartz" # do I ever use this?
 mas "Deliveries", id: 290986013
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541

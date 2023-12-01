@@ -12,7 +12,21 @@ setopt HIST_IGNORE_DUPS
 # keybindings
 bindkey \^U backward-kill-line
 
+# cd using path
 setopt autocd
+
+# tab complete filepaths on empty buffer
+function tab_on_empty_buffer {
+  if [[ $#BUFFER == 0 ]]; then
+    BUFFER="./"
+    CURSOR="2"
+    zle list-choices
+  else
+    zle expand-or-complete
+  fi
+}
+zle -N tab_on_empty_buffer
+bindkey '^I' tab_on_empty_buffer
 
 # asdf initialization
 if type brew &>/dev/null; then

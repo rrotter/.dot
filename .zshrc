@@ -1,7 +1,3 @@
-# never see nano/pico again!
-# _not in .zshenv because that causes zsh to screw up keybindings_
-export EDITOR=/usr/bin/vim
-
 # history
 HISTSIZE=2000000
 SAVEHIST=2000000
@@ -10,10 +6,13 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_DUPS
 
 # keybindings
+bindkey -e # emacs bindings
 bindkey \^U backward-kill-line
 
-# cd using path
-setopt autocd
+# misc shell settings
+setopt AUTO_CD
+setopt NO_CASE_GLOB
+setopt EXTENDED_GLOB
 
 # tab complete filepaths on empty buffer
 function tab_on_empty_buffer {

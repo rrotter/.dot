@@ -9,3 +9,6 @@ export ASDF_GEM_DEFAULT_PACKAGES_FILE="$HOME/.config/default-gems"
 
 # put ~/go somewhere we don't have to look at it
 export GOPATH="$HOME/.local/go"
+
+# never see nano/pico again!
+export EDITOR=/usr/bin/vim

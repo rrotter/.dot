@@ -35,6 +35,9 @@ fi
 # common alias file
 source $HOME/.aliases
 
+# zsh-only alias
+alias history='history -E'
+
 # alias git commands to a bareword if we're in a git repo
 # use `command diff` if you want the actual `diff` command in a git repo
 function com diff log () {

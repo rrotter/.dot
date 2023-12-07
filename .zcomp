@@ -24,7 +24,9 @@ function () {
     _ignore=${_ignore}'|keytool'
     # misc deprecated junk
     _ignore=${_ignore}'|DirectoryService|DeRez|ResMerger|Rez|SetFile|SplitForks'
-    _ignore=${_ignore}'ppdc|ppdhtml|ppdi|ppdmerge|ppdpo'
+    _ignore=${_ignore}'|ppdc|ppdhtml|ppdi|ppdmerge|ppdpo'
+    # other junk, not deprecated, but mostly useless
+    _ignore=${_ignore}'|hidutil|hiutil'
     # other things I don't use directly, but for whatever reason want to keep installed
     _ignore=${_ignore}'|apptainer.lima|docker.lima|kubectl.lima|nerdctl.lima|podman.lima'
   fi
@@ -35,6 +37,8 @@ function () {
   fi
   # aws
   _ignore=${_ignore}'|aws_completer'
+  # zsh variables
+  _ignore=${_ignore}'|histchars|historywords'
 
   zstyle ':completion:*:*:-command-:*:*' ignored-patterns $_ignore
 }

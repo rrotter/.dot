@@ -11,3 +11,5 @@ set hlsearch
 
 " disable mouse selection
 set mouse=
+
+set background=light

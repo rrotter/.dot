@@ -16,8 +16,9 @@
 .lesshst
 .lima
 .local
-.npm
 .node_repl_history
+.npm
+.python_history
 .swiftpm
 .terraform.d
 .wget-hsts

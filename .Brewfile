@@ -23,7 +23,6 @@ brew "jsonnet-bundler"
 brew "helm"
 
 # terraform
-brew "terraform"
 brew "opentofu"
 
 # vm
@@ -49,6 +48,7 @@ cask "discord"
 cask "firefox"
 cask "rectangle" # window snap tool
 cask "skim"
+cask "slack"
 cask "zoom"
 mas "Deliveries", id: 290986013
 mas "Numbers", id: 409203825

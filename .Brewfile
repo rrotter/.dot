@@ -1,5 +1,5 @@
 # package management
-brew "asdf" # need this for python, ruby, node, etc
+brew "asdf"
 brew "xz" # required for python-build
 brew "mas" # so we can install mas apps here!
 
@@ -13,6 +13,9 @@ brew "jq"
 tap "homebrew/aliases" # add `brew alias` command
 brew "dos2unix"
 brew "duti" # for setting mac file handlers
+
+# aws
+brew "awscli"
 
 # kubernetes
 brew "kubernetes-cli"
@@ -58,3 +61,9 @@ mas "Wipr", id: 1320666476
 # misc tools
 cask "kicad"
 mas "Mactracker", id: 430255202
+
+# dependencies
+# these are listed explicitly so we can unlink the binaries
+brew "docutils", link: false # for awscli
+brew "python@3.11", link: false # for awscli
+brew "openssl@3", link: false

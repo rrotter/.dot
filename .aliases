@@ -18,8 +18,13 @@ for cmd in add br branch checkout ci co commit fixup l lo pull remote st status;
   alias $cmd="git ${cmd}"
 done
 
-# color prefs
-alias ls="ls --color=auto"
+# ls decoration
+alias ls="ls -F --color=auto"
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
+alias lal="ls -la"
+alias l="ls"
 
 # Monday is the first day of the week.
 if [[ -a /opt/homebrew/opt/util-linux/bin/cal ]]; then

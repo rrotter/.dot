@@ -4,10 +4,13 @@ if type brew &>/dev/null; then
 fi
 
 ## compinit ##
-autoload bashcompinit && bashcompinit # bash compat, needed for awscli
+autoload -Uz +X bashcompinit && bashcompinit # bash compat needed for some utils :(
 autoload -Uz compinit && compinit
 if type aws &>/dev/null; then
   complete -C '$(which aws_completer)' aws
+fi
+if type tk &>/dev/null; then
+  complete -C '$(which tk)' tk
 fi
 
 ## tweaks after initialization ##
@@ -26,7 +29,7 @@ function () {
     _ignore=${_ignore}'|DirectoryService|DeRez|ResMerger|Rez|SetFile|SplitForks'
     _ignore=${_ignore}'|ppdc|ppdhtml|ppdi|ppdmerge|ppdpo'
     # other junk, not deprecated, but mostly useless
-    _ignore=${_ignore}'|hidutil|hiutil'
+    _ignore=${_ignore}'|hidutil|hiutil|tkcon|tkmib|tkpp*'
     # other things I don't use directly, but for whatever reason want to keep installed
     _ignore=${_ignore}'|apptainer.lima|docker.lima|kubectl.lima|nerdctl.lima|podman.lima'
   fi

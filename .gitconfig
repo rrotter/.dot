@@ -1,18 +1,18 @@
 [user]
-	name = Ryan Rotter
-	email = rrotter@users.noreply.github.com
+    name = Ryan Rotter
+    email = rrotter@users.noreply.github.com
 [alias]
-	co = checkout
-	ci = commit
-	br = branch
-	fixup = commit --amend
-	st = status
-	lo = log -4
-	l = log origin/HEAD..
-	com = ! git checkout `git branch | cut -c 3- | grep -E '^(main|master|production)$' | head -1`
+    co = checkout
+    ci = commit
+    br = branch
+    fixup = commit --amend
+    st = status
+    lo = log -4
+    l = log origin/HEAD..
+    com = ! git checkout `git branch | cut -c 3- | grep -E '^(main|master|production)$' | head -1`
 [push]
-	autoSetupRemote = true
+    autoSetupRemote = true
 [core]
-	excludesfile = ~/.config/gitignore
+    excludesfile = ~/.config/gitignore
 [commit]
-	verbose = true
+    verbose = true

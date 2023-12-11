@@ -11,6 +11,7 @@ type kubectl &>/dev/null && alias k=kubectl
 type k9s &>/dev/null && alias k9=k9s
 type ruby &>/dev/null && alias be="bundle exec"
 alias g=git
+alias hist=history
 
 # ls decoration
 alias ls="ls -F --color=auto"
@@ -23,6 +24,13 @@ alias l="ls"
 # Monday is the first day of the week.
 if [[ -a /opt/homebrew/opt/util-linux/bin/cal ]]; then
   alias cal="/opt/homebrew/opt/util-linux/bin/cal -m"
+fi
+
+# link tac without the rest of coreutils
+if ! type tac &>/dev/null; then
+  if [[ -x $HOMEBREW_PREFIX/opt/coreutils/bin/tac ]]; then
+    alias tac="$HOMEBREW_PREFIX/opt/coreutils/bin/tac"
+  fi
 fi
 
 # manage dotfiles

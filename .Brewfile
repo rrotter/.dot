@@ -6,7 +6,6 @@ brew "mas" # so we can install mas apps here!
 # cli tools
 #mas "Xcode", id: 497799835 # this triggers a reinstall, which takes forever
 brew "watch"
-brew "coreutils" # tac, etc
 brew "wget"
 brew "util-linux" # really just for `cal -m`
 brew "jq"
@@ -66,6 +65,9 @@ mas "Mactracker", id: 430255202
 
 # dependencies
 # these are listed explicitly so we can unlink the binaries
+brew "coreutils", link: false # for asdf, occasionally use a few commands here, link those individually
 brew "docutils", link: false # for awscli
-brew "python@3.11", link: false # for awscli
-brew "openssl@3", link: false
+brew "glib", link: false # for lima/qemu
+brew "libtool", link: false # for asdf
+brew "python@3", link: false # for awscli
+brew "openssl@3", link: false # everything

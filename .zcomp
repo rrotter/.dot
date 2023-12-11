@@ -33,11 +33,6 @@ function () {
     # other things I don't use directly, but for whatever reason want to keep installed
     _ignore=${_ignore}'|apptainer.lima|docker.lima|kubectl.lima|nerdctl.lima|podman.lima'
   fi
-  if type brew &>/dev/null; then
-    # gnucoreutils - disable autocompletion of every g* prefixed command; regen this list with:
-    #   echo $(brew ls coreutils libtool glib | grep '/bin/g' | sed 's/.*bin\///' | sort) | sed 's/ /|/g' | sed 's/\[/\\\[/g'
-    _ignore=${_ignore}'|g\[|gb2sum|gbase32|gbase64|gbasename|gbasenc|gcat|gchcon|gchgrp|gchmod|gchown|gchroot|gcksum|gcomm|gcp|gcsplit|gcut|gdate|gdbus|gdbus-codegen|gdd|gdf|gdir|gdircolors|gdirname|gdu|gecho|genv|gexpand|gexpr|gfactor|gfalse|gfmt|gfold|ggroups|ghead|ghostid|gid|ginstall|gio|gio-querymodules|gjoin|gkill|glib-compile-resources|glib-compile-schemas|glib-genmarshal|glib-gettextize|glib-mkenums|glibtool|glibtoolize|glink|gln|glogname|gls|gmd5sum|gmkdir|gmkfifo|gmknod|gmktemp|gmv|gnice|gnl|gnohup|gnproc|gnumfmt|gobject-query|god|gpaste|gpathchk|gpinky|gpr|gprintenv|gprintf|gptx|gpwd|greadlink|grealpath|gresource|grm|grmdir|gruncon|gseq|gsettings|gsha1sum|gsha224sum|gsha256sum|gsha384sum|gsha512sum|gshred|gshuf|gsleep|gsort|gsplit|gstat|gstdbuf|gstty|gsum|gsync|gtac|gtail|gtee|gtest|gtester|gtester-report|gtimeout|gtouch|gtr|gtrue|gtruncate|gtsort|gtty|guname|gunexpand|guniq|gunlink|guptime|gusers|gvdir|gwc|gwho|gwhoami|gyes'
-  fi
   # aws
   _ignore=${_ignore}'|aws_completer'
   # zsh variables

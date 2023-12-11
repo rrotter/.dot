@@ -4,6 +4,8 @@ SAVEHIST=2000000
 setopt EXTENDED_HISTORY
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
 
 # keybindings
 bindkey -e # emacs bindings

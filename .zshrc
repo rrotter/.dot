@@ -41,9 +41,15 @@ source $HOME/.aliases
 # zsh-only alias
 alias history='history -t "%e.%-m.%Y %H:%M"'
 
-# alias git commands to a bareword if we're in a git repo
-# use `command diff` if you want the actual `diff` command in a git repo
-function com diff log () {
+# alias git commands to a bareword
+# use real aliases for commands where we really need autocomplete
+for cmd in add br branch co checkout ci commit; do
+  alias $cmd="git ${cmd}"
+done
+# use a shell function to alias git commands _only when in a git repo_
+# use this solution to avoid colliding with other commands
+# use `command diff` if you want the actual `diff` command when in a git repo
+function comain diff fixup lo log pull push remote st status () {
   if git rev-parse --is-inside-work-tree &> /dev/null
   then
     git $0 "$@"

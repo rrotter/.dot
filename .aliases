@@ -12,12 +12,6 @@ type k9s &>/dev/null && alias k9=k9s
 type ruby &>/dev/null && alias be="bundle exec"
 alias g=git
 
-# git subcommands
-# This is the preferred method because it preserves autocomplete functionality
-for cmd in add br branch checkout ci co commit fixup l lo pull remote st status; do
-  alias $cmd="git ${cmd}"
-done
-
 # ls decoration
 alias ls="ls -F --color=auto"
 alias ll="ls -l"

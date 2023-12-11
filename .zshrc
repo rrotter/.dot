@@ -29,7 +29,10 @@ bindkey '^I' tab_on_empty_buffer
 
 # asdf initialization
 if type brew &>/dev/null; then
-  source $(brew --prefix asdf)/libexec/asdf.sh
+  local ASDF_PREFIX=$(brew --prefix asdf)
+  if [[ -d $ASDF_PREFIX ]]; then
+    source $(brew --prefix asdf)/libexec/asdf.sh
+  fi
 fi
 
 # common alias file

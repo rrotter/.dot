@@ -10,6 +10,7 @@
 .asdf
 .bash_history
 .brew-aliases
+.bundle
 .cache
 .dbus
 .gem

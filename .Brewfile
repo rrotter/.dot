@@ -6,13 +6,13 @@ tap "homebrew/aliases" # add `brew alias` command
 
 # cli tools
 #mas "Xcode", id: 497799835 # this triggers a reinstall, which takes forever
-brew "watch"
-brew "wget"
-brew "util-linux" # really just for `cal -m`
-brew "jq"
 brew "dos2unix"
 brew "duti" # for setting mac file handlers
+brew "fd"
+brew "jq"
 brew "ripgrep"
+brew "watch"
+brew "wget"
 
 # aws
 brew "awscli"
@@ -30,8 +30,8 @@ brew "helm"
 brew "opentofu"
 
 # vm
-cask "utm"
 brew "lima"
+cask "utm"
 
 # dev
 brew "gh"

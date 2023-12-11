@@ -21,11 +21,6 @@ alias lla="ls -la"
 alias lal="ls -la"
 alias l="ls"
 
-# Monday is the first day of the week.
-if [[ -a /opt/homebrew/opt/util-linux/bin/cal ]]; then
-  alias cal="/opt/homebrew/opt/util-linux/bin/cal -m"
-fi
-
 # fake tac
 if ! type tac &>/dev/null; then
   alias tac="tail -r"

@@ -2,6 +2,7 @@
 brew "asdf"
 brew "xz" # required for python-build
 brew "mas" # so we can install mas apps here!
+tap "homebrew/aliases" # add `brew alias` command
 
 # cli tools
 #mas "Xcode", id: 497799835 # this triggers a reinstall, which takes forever
@@ -9,9 +10,9 @@ brew "watch"
 brew "wget"
 brew "util-linux" # really just for `cal -m`
 brew "jq"
-tap "homebrew/aliases" # add `brew alias` command
 brew "dos2unix"
 brew "duti" # for setting mac file handlers
+brew "ripgrep"
 
 # aws
 brew "awscli"

@@ -33,6 +33,8 @@ function () {
     # other things I don't use directly, but for whatever reason want to keep installed
     _ignore=${_ignore}'|apptainer.lima|docker.lima|kubectl.lima|nerdctl.lima|podman.lima'
   fi
+  # brew and kubectl extensions (doesn't affect use as subcommands)
+  _ignore=${_ignore}'|brew-*|kubectl-*'
   # aws
   _ignore=${_ignore}'|aws_completer'
   # zsh variables

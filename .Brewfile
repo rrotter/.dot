@@ -66,7 +66,7 @@ mas "Mactracker", id: 430255202
 
 # dependencies
 # these are listed explicitly so we can unlink the binaries
-brew "coreutils", link: false # for asdf, occasionally use a few commands here, link those individually
+brew "coreutils", link: false # for asdf
 brew "docutils", link: false # for awscli
 brew "glib", link: false # for lima/qemu
 brew "libtool", link: false # for asdf

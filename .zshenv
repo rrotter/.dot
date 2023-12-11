@@ -3,6 +3,7 @@ export LC_CTYPE=$LANG
 
 if [[ -f /opt/homebrew/bin/brew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  export HOMEBREW_NO_ENV_HINTS=true
 fi
 
 # put ~/go somewhere we don't have to look at it

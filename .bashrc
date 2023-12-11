@@ -11,7 +11,7 @@ HISTCONTROL=erasedups
 shopt -s histappend
 HISTSIZE=100000
 HISTFILESIZE=100000
-HISTTIMEFORMAT="%-d.%m.%Y %H:%M  "
+HISTTIMEFORMAT="%e.%-m.%Y %H:%M  "
 
 # bash completion
 # requires `bash-completion` package

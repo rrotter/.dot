@@ -36,7 +36,7 @@ fi
 source $HOME/.aliases
 
 # zsh-only alias
-alias history='history -E'
+alias history='history -t "%e.%-m.%Y %H:%M"'
 
 # alias git commands to a bareword if we're in a git repo
 # use `command diff` if you want the actual `diff` command in a git repo

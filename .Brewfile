@@ -6,9 +6,11 @@ tap "homebrew/aliases" # add `brew alias` command
 
 # cli tools
 #mas "Xcode", id: 497799835 # this triggers a reinstall, which takes forever
+brew "bat"
 brew "dos2unix"
 brew "duti" # for setting mac file handlers
 brew "fd"
+brew "glow"
 brew "jq"
 brew "ripgrep"
 brew "watch"
@@ -34,9 +36,10 @@ brew "lima"
 cask "utm"
 
 # dev
+brew "cmake"
 brew "gh"
 brew "glab"
-brew "glow"
+brew "ninja"
 cask "hex-fiend"
 cask "iterm2"
 cask "kitty"

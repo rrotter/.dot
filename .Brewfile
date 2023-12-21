@@ -13,6 +13,7 @@ brew "fd"
 brew "glow"
 brew "jq"
 brew "ripgrep"
+brew "unar"
 brew "watch"
 brew "wget"
 
@@ -72,6 +73,7 @@ mas "Mactracker", id: 430255202
 brew "coreutils", link: false # for asdf
 brew "docutils", link: false # for awscli
 brew "glib", link: false # for lima/qemu
+brew "libgit2", link: false # for bat
 brew "libtool", link: false # for asdf
 brew "python@3", link: false # for awscli
 brew "openssl@3", link: false # everything

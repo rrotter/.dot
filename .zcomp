@@ -40,8 +40,12 @@ function () {
   # zsh variables
   _ignore=${_ignore}'|histchars|historywords'
 
-  zstyle ':completion:*:*:-command-:*:*' ignored-patterns $_ignore
+  zstyle ':completion::complete:-command-:*:*' ignored-patterns $_ignore
 }
 
-# git cherry-pick > git cherry
-zstyle ':completion::complete:git:*:*' ignored-patterns 'cherry'
+# don't autocomplete subcommands for setting up autocomplete 🤦
+for cmd in gh glow helm k9s kubectl limactl; do
+  if type _${cmd} &>/dev/null; then
+    zstyle ":completion::complete:${cmd}:*:*" ignored-patterns 'completion'
+  fi
+done

@@ -13,7 +13,9 @@ if type tk &>/dev/null; then
   complete -C '$(which tk)' tk
 fi
 
-## tweaks after initialization ##
+## settings ##
+zstyle ':completion:*' special-dirs '..'
+zstyle ':completion:*' ignore-parents pwd
 
 # ignore rarely used commands that conflict w/ common commands
 function () {

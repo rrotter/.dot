@@ -6,9 +6,6 @@ fi
 ## compinit ##
 autoload -Uz +X bashcompinit && bashcompinit # bash compat needed for some utils :(
 autoload -Uz compinit && compinit
-if type aws &>/dev/null; then
-  complete -C '$(which aws_completer)' aws
-fi
 if type tk &>/dev/null; then
   complete -C '$(which tk)' tk
 fi

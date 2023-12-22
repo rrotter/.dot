@@ -16,19 +16,6 @@ setopt AUTO_CD
 setopt NO_CASE_GLOB
 setopt EXTENDED_GLOB
 
-# tab complete filepaths on empty buffer
-function tab_on_empty_buffer {
-  if [[ $#BUFFER == 0 ]]; then
-    BUFFER="./"
-    CURSOR="2"
-    zle list-choices
-  else
-    zle expand-or-complete
-  fi
-}
-zle -N tab_on_empty_buffer
-bindkey '^I' tab_on_empty_buffer
-
 # asdf initialization
 if type brew &>/dev/null; then
   local ASDF_PREFIX=$(brew --prefix asdf)

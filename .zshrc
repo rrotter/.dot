@@ -38,7 +38,7 @@ done
 # use a shell function to alias git commands _only when in a git repo_
 # use this solution to avoid colliding with other commands
 # use `command diff` if you want the actual `diff` command when in a git repo
-function comain diff fixup lo log pull push remote st status () {
+function com diff fixup lo log pull push remote st status () {
   if git rev-parse --is-inside-work-tree &> /dev/null
   then
     git $0 "$@"

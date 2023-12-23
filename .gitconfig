@@ -14,8 +14,8 @@
     lr = ls-tree --abbrev HEAD -r
     llr = ls-tree --abbrev HEAD -lr
     lrl = ls-tree --abbrev HEAD -lr
-    # checkout main branch, even if it's badly named
-    comain = ! git checkout `git branch | cut -c 3- | grep -E '^(main|master|production)$' | head -1`
+    # checkout main branch, whatever its name is
+    com = ! git checkout $(git rev-parse --abbrev-ref origin/HEAD | cut -c8-)
     web = ! git config remote.origin.url && open -u $(git config remote.origin.url) || echo "no remote configured"
 [push]
     autoSetupRemote = true

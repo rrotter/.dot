@@ -28,6 +28,7 @@ brew "kubelogin"
 brew "tanka"
 brew "jsonnet-bundler"
 brew "helm"
+cask "openlens"
 
 # terraform
 brew "opentofu"

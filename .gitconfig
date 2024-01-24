@@ -14,6 +14,7 @@
     lr = ls-tree --abbrev HEAD -r
     llr = ls-tree --abbrev HEAD -lr
     lrl = ls-tree --abbrev HEAD -lr
+    root = rev-parse --show-toplevel
     # checkout main branch, whatever its name is
     com = ! git checkout $(git rev-parse --abbrev-ref origin/HEAD | cut -c8-)
     web = ! git config remote.origin.url && open -u $(git config remote.origin.url) || echo "no remote configured"

@@ -32,7 +32,7 @@ alias history='history -t "%e.%-m.%Y %H:%M"'
 
 # alias git commands to a bareword
 # use real aliases for commands where we really need autocomplete
-for cmd in add br branch co checkout ci commit; do
+for cmd in add br branch co checkout ci commit show; do
   alias $cmd="git ${cmd}"
 done
 # use a shell function to alias git commands _only when in a git repo_

@@ -13,6 +13,14 @@ type ruby &>/dev/null && alias be="bundle exec"
 alias g=git
 alias hist=history
 
+# configure tanka pager
+if type tk &>/dev/null; then
+  alias tk_completer=`which tk`
+  if type bat &>/dev/null; then
+    alias tk='PAGER="bat --language=yaml" tk'
+  fi
+fi
+
 # ls decoration
 alias ls="ls -F --color=auto"
 alias ll="ls -l"

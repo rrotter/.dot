@@ -7,7 +7,7 @@ fi
 autoload -Uz +X bashcompinit && bashcompinit # bash compat needed for some utils :(
 autoload -Uz compinit && compinit
 if type tk &>/dev/null; then
-  complete -C '$(which tk)' tk
+  complete -C tk_completer tk
 fi
 
 ## settings ##
@@ -34,8 +34,8 @@ function () {
   fi
   # brew and kubectl extensions (doesn't affect use as subcommands)
   _ignore=${_ignore}'|brew-*|kubectl-*'
-  # aws
-  _ignore=${_ignore}'|aws_completer'
+  # bash completers
+  _ignore=${_ignore}'|aws_completer|tk_completer'
   # zsh variables
   _ignore=${_ignore}'|histchars|historywords'
 

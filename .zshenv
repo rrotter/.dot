@@ -11,3 +11,10 @@ export GOPATH="$HOME/.local/go"
 
 # never see nano/pico again!
 export EDITOR=/usr/bin/vim
+
+# pager
+if type bat &>/dev/null; then
+  export PAGER=bat
+  export MANPAGER='less -sR'
+  export BAT_STYLE='grid,numbers'
+fi

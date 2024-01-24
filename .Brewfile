@@ -5,7 +5,6 @@ brew "mas" # so we can install mas apps here!
 tap "homebrew/aliases" # add `brew alias` command
 
 # cli tools
-#mas "Xcode", id: 497799835 # this triggers a reinstall, which takes forever
 brew "bat"
 brew "dos2unix"
 brew "duti" # for setting mac file handlers
@@ -28,14 +27,16 @@ brew "kubelogin"
 brew "tanka"
 brew "jsonnet-bundler"
 brew "helm"
-cask "openlens"
+cask "openlens" unless Hardware::CPU.virtualized?
 
 # terraform
 brew "opentofu"
 
-# vm
-brew "lima"
-cask "utm"
+unless Hardware::CPU.virtualized?
+  # vm
+  brew "lima"
+  cask "utm"
+end
 
 # dev
 brew "cmake"
@@ -44,30 +45,32 @@ brew "glab"
 brew "ninja"
 cask "hex-fiend"
 cask "iterm2"
-cask "kitty"
+cask "kitty" unless Hardware::CPU.virtualized?
 
-# text editors
-cask "textmate"
-brew "helix"
-cask "pulsar"
+unless Hardware::CPU.virtualized?
+  # text editors
+  cask "textmate"
+  brew "helix"
+  cask "pulsar"
 
-# desktop env
-cask "1password"
-cask "1password-cli"
-cask "discord"
-cask "firefox"
-cask "rectangle" # window snap tool
-cask "skim"
-cask "slack"
-cask "zoom"
-mas "Deliveries", id: 290986013
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Wipr", id: 1320666476
+  # desktop env
+  cask "1password"
+  cask "1password-cli"
+  cask "discord"
+  cask "firefox"
+  cask "rectangle" # window snap tool
+  cask "skim"
+  cask "slack"
+  cask "zoom"
+  mas "Deliveries", id: 290986013
+  mas "Numbers", id: 409203825
+  mas "Pages", id: 409201541
+  mas "Wipr", id: 1320666476
 
-# misc tools
-cask "kicad"
-mas "Mactracker", id: 430255202
+  # misc tools
+  cask "kicad"
+  mas "Mactracker", id: 430255202
+end
 
 # dependencies
 # these are listed explicitly so we can unlink the binaries

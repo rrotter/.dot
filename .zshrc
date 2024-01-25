@@ -24,6 +24,23 @@ if type brew &>/dev/null; then
   fi
 fi
 
+# vcs_info: show git status in $PROMPT
+autoload -Uz add-zsh-hook vcs_info
+setopt prompt_subst
+add-zsh-hook precmd vcs_info
+zstyle ':vcs_info:*' enable git
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '%F{red}●%f'
+zstyle ':vcs_info:*' stagedstr '%F{blue}●%f'
+
+zstyle ':vcs_info:git*' formats '%c%u%F{208}λ%f%b'
+zstyle ':vcs_info:git*' actionformats '%F{red}%a%f %F{208}λ%f%b'
+
+# set $PROMPT
+PROMPT='%1~ %(1j.%F{blue}[%j]%f .)%(?.%F{black}.%(130?.%F{yellow}.%(146?.%F{blue}.%F{red})))%#%f '
+RPROMPT='${vcs_info_msg_0_}'
+
 # common alias file
 source $HOME/.aliases
 

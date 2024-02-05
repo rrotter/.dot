@@ -72,6 +72,9 @@ unless Hardware::CPU.virtualized?
   # misc tools
   cask "kicad"
   mas "Mactracker", id: 430255202
+
+  # annoyances
+  cask "notunes"
 end
 
 # dependencies
